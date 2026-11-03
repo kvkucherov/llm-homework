@@ -1,0 +1,98 @@
+{
+  "answer_accuracy": 0.625,
+  "Q": 0.525,
+  "mean_input_tokens": 2694.375,
+  "mean_output_tokens": 308.375,
+  "mean_llm_calls": 1,
+  "mean_cost": 4183.875,
+  "median_latency_ms": 8452.0,
+  "efficiency_valid": true,
+  "E": null,
+  "grade": null,
+  "category_scores": {
+    "условия": 0.4,
+    "сопоставление": 0.8,
+    "применение": 0.4,
+    "недостаточность данных": 0.5
+  },
+  "details": [
+    {
+      "id": "own_001",
+      "category": "условия",
+      "A": 1,
+      "F": 0.0,
+      "score": 0.8,
+      "error": null
+    },
+    {
+      "id": "own_002",
+      "category": "условия",
+      "A": 0,
+      "F": 0.0,
+      "score": 0.0,
+      "error": null
+    },
+    {
+      "id": "own_003",
+      "category": "сопоставление",
+      "A": 1,
+      "F": 0.0,
+      "score": 0.8,
+      "error": null
+    },
+    {
+      "id": "own_004",
+      "category": "сопоставление",
+      "A": 1,
+      "F": 0.0,
+      "score": 0.8,
+      "error": null
+    },
+    {
+      "id": "own_005",
+      "category": "применение",
+      "A": 0,
+      "F": 0.0,
+      "score": 0.0,
+      "error": null
+    },
+    {
+      "id": "own_006",
+      "category": "применение",
+      "A": 1,
+      "F": 0.0,
+      "score": 0.8,
+      "error": null
+    },
+    {
+      "id": "own_007",
+      "category": "недостаточность данных",
+      "A": 1,
+      "F": 0,
+      "score": 1,
+      "error": null
+    },
+    {
+      "id": "own_008",
+      "category": "недостаточность данных",
+      "A": 0,
+      "F": 0,
+      "score": 0,
+      "error": null
+    }
+  ],
+  "unexpected_ids": [],
+  "note": "No own-question baseline was measured; efficiency grade is not reported.",
+  "previous_solution": {
+    "answer_accuracy": 0.5,
+    "Q": 0.42500000000000004,
+    "mean_cost": 3890.625,
+    "category_scores": {
+      "условия": 0.4,
+      "сопоставление": 0.4,
+      "применение": 0.4,
+      "недостаточность данных": 0.5
+    }
+  },
+  "comparison_note": "Current version: 5/8; preceding index version: 4/8. own_001 and own_003 improved, own_002 regressed. The earlier original solution also had 5/8."
+}

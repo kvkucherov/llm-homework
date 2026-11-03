@@ -1,0 +1,760 @@
+{
+  "final": {
+    "answer_accuracy": 0.9333333333333333,
+    "Q": 0.8986111111111111,
+    "mean_input_tokens": 2760.733333333333,
+    "mean_output_tokens": 289.4,
+    "mean_llm_calls": 1,
+    "mean_cost": 4174.333333333333,
+    "median_latency_ms": 9196,
+    "efficiency_valid": true,
+    "E": 0.7980675556975166,
+    "grade": 85.32464265751018,
+    "category_scores": {
+      "условия": 0.78,
+      "сопоставление": 0.8366666666666667,
+      "применение": 0.9777777777777777,
+      "недостаточность данных": 1
+    },
+    "details": [
+      {
+        "id": "q_001",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_002",
+        "category": "условия",
+        "A": 0,
+        "F": 0.6666666666666666,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_003",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_004",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.4,
+        "score": 0.8800000000000001,
+        "error": null
+      },
+      {
+        "id": "q_005",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_006",
+        "category": "условия",
+        "A": 1,
+        "F": 0.5,
+        "score": 0.9,
+        "error": null
+      },
+      {
+        "id": "q_007",
+        "category": "применение",
+        "A": 1,
+        "F": 0.6666666666666666,
+        "score": 0.9333333333333333,
+        "error": null
+      },
+      {
+        "id": "q_008",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_009",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_010",
+        "category": "применение",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_011",
+        "category": "применение",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_012",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.3333333333333333,
+        "score": 0.8666666666666667,
+        "error": null
+      },
+      {
+        "id": "q_013",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_014",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_015",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      }
+    ],
+    "unexpected_ids": []
+  },
+  "no_context": {
+    "answer_accuracy": 0.8666666666666667,
+    "Q": null,
+    "mean_input_tokens": 247.13333333333333,
+    "mean_output_tokens": 258.4,
+    "mean_llm_calls": 1,
+    "mean_cost": 1536.7333333333333,
+    "median_latency_ms": 3473,
+    "efficiency_valid": true,
+    "E": 0,
+    "grade": null,
+    "category_scores": {
+      "условия": 0.48000000000000004,
+      "сопоставление": 0.8,
+      "применение": 0.8,
+      "недостаточность данных": 1
+    },
+    "details": [
+      {
+        "id": "q_001",
+        "category": "условия",
+        "A": 0,
+        "F": 0,
+        "score": 0,
+        "error": "ValueError: answer_ids must be a list of strings"
+      },
+      {
+        "id": "q_002",
+        "category": "условия",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_003",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_004",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_005",
+        "category": "условия",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_006",
+        "category": "условия",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_007",
+        "category": "применение",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_008",
+        "category": "условия",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_009",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_010",
+        "category": "применение",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_011",
+        "category": "применение",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_012",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_013",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_014",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_015",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      }
+    ],
+    "unexpected_ids": []
+  },
+  "baseline": {
+    "answer_accuracy": 0.8,
+    "Q": 0.7381666666666666,
+    "mean_input_tokens": 2010.0666666666666,
+    "mean_output_tokens": 266.3333333333333,
+    "mean_llm_calls": 1,
+    "mean_cost": 3331.4,
+    "median_latency_ms": 5923,
+    "efficiency_valid": true,
+    "E": 1,
+    "grade": 73.81666666666666,
+    "category_scores": {
+      "условия": 0.736,
+      "сопоставление": 0.6166666666666667,
+      "применение": 0.6,
+      "недостаточность данных": 1
+    },
+    "details": [
+      {
+        "id": "q_001",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_002",
+        "category": "условия",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_003",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_004",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.3333333333333333,
+        "score": 0.8666666666666667,
+        "error": null
+      },
+      {
+        "id": "q_005",
+        "category": "условия",
+        "A": 1,
+        "F": 0.4,
+        "score": 0.8800000000000001,
+        "error": null
+      },
+      {
+        "id": "q_006",
+        "category": "условия",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_007",
+        "category": "применение",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_008",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_009",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_010",
+        "category": "применение",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_011",
+        "category": "применение",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_012",
+        "category": "сопоставление",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_013",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_014",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_015",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      }
+    ],
+    "unexpected_ids": []
+  },
+  "no_reranker": {
+    "answer_accuracy": 0.6,
+    "Q": 0.5894444444444444,
+    "mean_input_tokens": 2933.8,
+    "mean_output_tokens": 321.2,
+    "mean_llm_calls": 1,
+    "mean_cost": 4474.6,
+    "median_latency_ms": 7505,
+    "efficiency_valid": true,
+    "E": 0.7445134760648996,
+    "grade": 55.17956664034526,
+    "category_scores": {
+      "условия": 0.56,
+      "сопоставление": 0.22000000000000003,
+      "применение": 0.5777777777777778,
+      "недостаточность данных": 1
+    },
+    "details": [
+      {
+        "id": "q_001",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_002",
+        "category": "условия",
+        "A": 0,
+        "F": 0.6666666666666666,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_003",
+        "category": "сопоставление",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_004",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.4,
+        "score": 0.8800000000000001,
+        "error": null
+      },
+      {
+        "id": "q_005",
+        "category": "условия",
+        "A": 0,
+        "F": 0.6666666666666666,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_006",
+        "category": "условия",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_007",
+        "category": "применение",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_008",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_009",
+        "category": "сопоставление",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_010",
+        "category": "применение",
+        "A": 1,
+        "F": 0.6666666666666666,
+        "score": 0.9333333333333333,
+        "error": null
+      },
+      {
+        "id": "q_011",
+        "category": "применение",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_012",
+        "category": "сопоставление",
+        "A": 0,
+        "F": 0.3333333333333333,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_013",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_014",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_015",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      }
+    ],
+    "unexpected_ids": []
+  },
+  "no_dense": {
+    "answer_accuracy": 0.6666666666666666,
+    "Q": 0.5825,
+    "mean_input_tokens": 2700.866666666667,
+    "mean_output_tokens": 310.3333333333333,
+    "mean_llm_calls": 1,
+    "mean_cost": 4198.2,
+    "median_latency_ms": 8509,
+    "efficiency_valid": true,
+    "E": 0.7935305607164976,
+    "grade": 55.24328879043399,
+    "category_scores": {
+      "условия": 0.5466666666666666,
+      "сопоставление": 0.8500000000000001,
+      "применение": 0.26666666666666666,
+      "недостаточность данных": 0.6666666666666666
+    },
+    "details": [
+      {
+        "id": "q_001",
+        "category": "условия",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_002",
+        "category": "условия",
+        "A": 0,
+        "F": 1.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_003",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_004",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.6666666666666666,
+        "score": 0.9333333333333333,
+        "error": null
+      },
+      {
+        "id": "q_005",
+        "category": "условия",
+        "A": 1,
+        "F": 0.6666666666666666,
+        "score": 0.9333333333333333,
+        "error": null
+      },
+      {
+        "id": "q_006",
+        "category": "условия",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_007",
+        "category": "применение",
+        "A": 0,
+        "F": 0.0,
+        "score": 0.0,
+        "error": null
+      },
+      {
+        "id": "q_008",
+        "category": "условия",
+        "A": 1,
+        "F": 1.0,
+        "score": 1.0,
+        "error": null
+      },
+      {
+        "id": "q_009",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_010",
+        "category": "применение",
+        "A": 1,
+        "F": 0.0,
+        "score": 0.8,
+        "error": null
+      },
+      {
+        "id": "q_011",
+        "category": "применение",
+        "A": 0,
+        "F": 0,
+        "score": 0,
+        "error": "ValueError: Expected exactly id,answer_ids,abstain,rationale,citations"
+      },
+      {
+        "id": "q_012",
+        "category": "сопоставление",
+        "A": 1,
+        "F": 0.3333333333333333,
+        "score": 0.8666666666666667,
+        "error": null
+      },
+      {
+        "id": "q_013",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_014",
+        "category": "недостаточность данных",
+        "A": 1,
+        "F": 0,
+        "score": 1,
+        "error": null
+      },
+      {
+        "id": "q_015",
+        "category": "недостаточность данных",
+        "A": 0,
+        "F": 0,
+        "score": 0,
+        "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1158 (char 1157)"
+      }
+    ],
+    "unexpected_ids": []
+  },
+  "_provenance": {
+    "signature": {
+      "config.json": "fc0b92ecb99d916ad744b3ec75e74ede547f45a4af013a87f4fa6b4e4fdd9863",
+      "runtime.json": "7e579636b805960df4f7b8abb9dfd019684dcd2ead177280b887257f0db21266",
+      "build_index.py": "e67f2c4816a8aabe849d6af7a9ddfe668a0f9fc0be9d036e6734733288387018",
+      "predict.py": "6f26da65dbbd4f8b9c583774caffffe1230358d8a8eb8683def6caa0afdbc266",
+      "rag/indexing.py": "47c9c03b7049378eeb4b7a8fbfbd46c3518000ef0a440f488e4f2fef835f48e5",
+      "rag/formulas.py": "3315b87b092f4cd1b97403d33e4b150af813abeea518414df813335bbdef1fc1",
+      "rag/retrieval.py": "7ad80e635f048940f594d760d8480c55585072d26816723821fa20d76ee6a0aa",
+      "rag/dense.py": "fb253d8b25a89f500add9d00ce52d5ce969a37ac9bbc02b63f24c9414e4e5a94",
+      "rag/rerank.py": "1e1e164d72b90b366ae117ad6005873468ccf7ef5c6a79089ff24e6873494470",
+      "local/index/index.json": "ffac1df52599d5220dd308419409d8b47d41ee95c93a164441f964159ea72896",
+      "local/index/vectors.npy": "2919fab5adcd51b04b7209f3a355dad8bfb789ea357dd0d0607ba0ba0e33f093",
+      "local/index/section_vectors.npy": "30f0c5970b58984bbabd38b2d0fa7d5a4c0fa20d61920cfbe32246818e56307e",
+      "local/data/corpus.jsonl": "26455349ed9bf36acee87246cc43be33ec9fd3553d1838203de692b0c2623243",
+      "datasets/dev/dev_questions.jsonl": "1e3e67f69a85855bdeb835268fb46fe4d6897e4863d03eda920f4eb38365074c"
+    },
+    "fresh_runs": [
+      "final",
+      "no_reranker",
+      "no_dense"
+    ],
+    "reused_runs": [
+      "baseline",
+      "no_context"
+    ],
+    "note": "Final was generated once together with eight own questions. Six raw responses had only a terminal period after the JSON object; the current parser was applied to the same raw responses without new LLM calls or changes to chosen options. Both ablations were then rerun with the final parser. Baseline prompts match the previous implementation on all 15 questions; no-context prompt/runtime/questions are unchanged. Their previous measured metrics are reused.",
+    "format_repairs": [
+      "q_009",
+      "q_011",
+      "q_012",
+      "q_013",
+      "q_015",
+      "own_007"
+    ],
+    "submission_ids": {
+      "final": [
+        "tfkp-final-ab51ec94b877"
+      ],
+      "no_context": [
+        "tfkp-comparison-dfc10ade60-no_context"
+      ],
+      "baseline": [
+        "tfkp-comparison-dfc10ade60-baseline"
+      ],
+      "no_reranker": [
+        "tfkp-refined-be590ab1b4-no_reranker"
+      ],
+      "no_dense": [
+        "tfkp-refined-9deb25dab0-no_dense"
+      ]
+    }
+  }
+}

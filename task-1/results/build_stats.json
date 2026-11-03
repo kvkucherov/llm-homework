@@ -1,0 +1,16 @@
+{
+  "elapsed_seconds": 45.044125333999546,
+  "peak_rss_bytes": 1750269952,
+  "size_bytes": 1007554696,
+  "reranker_parameters": 117641089,
+  "blocks": 465,
+  "passages": 2098,
+  "formula_views": 1493,
+  "sections": 18,
+  "formula_records": 22,
+  "max_embedding_tokens": 485,
+  "index_version": 3,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.16",
+  "corpus_sha256": "26455349ed9bf36acee87246cc43be33ec9fd3553d1838203de692b0c2623243"
+}

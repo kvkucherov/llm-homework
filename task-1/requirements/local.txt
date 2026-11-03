@@ -1,0 +1,6 @@
+-r ../requirements.txt
+# Local generation on Apple Silicon; tested on macOS 26.6.2.
+mlx==0.32.4
+mlx-lm==0.31.3
+mlx-metal==0.32.4
+protobuf==7.36.2

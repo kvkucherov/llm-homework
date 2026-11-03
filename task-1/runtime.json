@@ -1,0 +1,30 @@
+{
+  "provenance": "Student-defined development runtime: no runtime.json was supplied; identical settings in all experiments.",
+  "model": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "local_model": "mlx-community/Qwen3.5-4B-4bit",
+  "local_revision": "0e7ffd5c629ef7719d4cbc04069232580bfa9d9c",
+  "model_dir": "local/models/qwen",
+  "backend": "mlx-lm",
+  "quantization": "affine 4bit, group_size=64 (see model config)",
+  "enable_thinking": false,
+  "sampling": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "presence_penalty": 0.0,
+    "seed": 42
+  },
+  "limits": {
+    "llm_calls": 4,
+    "input_tokens": 16384,
+    "output_tokens": 4096,
+    "request_tokens": 8192
+  },
+  "timeout_seconds": 240,
+  "retrieval_device": "cpu",
+  "retrieval_ram_gb": 4,
+  "local_llm_ram_budget_gb": 16,
+  "host": "127.0.0.1",
+  "port": 8000
+}

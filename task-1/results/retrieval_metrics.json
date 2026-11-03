@@ -1,0 +1,20 @@
+{
+  "candidate_block_ids": {
+    "mean_recall": 0.7916666666666666,
+    "any_source_questions": 12,
+    "complete_set_questions": 8,
+    "answerable_questions": 12
+  },
+  "ranked_block_ids": {
+    "mean_recall": 0.5694444444444444,
+    "any_source_questions": 8,
+    "complete_set_questions": 6,
+    "answerable_questions": 12
+  },
+  "retrieved_block_ids": {
+    "mean_recall": 0.6388888888888888,
+    "any_source_questions": 10,
+    "complete_set_questions": 6,
+    "answerable_questions": 12
+  }
+}
