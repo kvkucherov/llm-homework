@@ -1,0 +1,9 @@
+build/
+vendor/
+local/
+reports/
+replays/
+__pycache__/
+*.pyc
+.env
+references.json

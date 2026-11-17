@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viper · повтор матча</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1319;--panel:#14212a;--text:#ecf1f4;--muted:#a4b7c5;--green:#36d6a0;--orange:#ffba75}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:36px 24px}header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:28px}
+h1{font-size:28px;margin:0}h1 span{font-weight:400;color:var(--muted);font-size:16px}p{color:var(--muted);line-height:1.5}
+.layout{display:grid;grid-template-columns:minmax(250px,600px) minmax(180px,1fr);gap:28px}canvas{display:block;width:100%;aspect-ratio:1;background:var(--panel);border-radius:12px}
+.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}button,select{font:inherit;color:var(--text);background:var(--panel);border:1px solid #385063;padding:9px 14px;border-radius:7px;cursor:pointer}button:disabled{opacity:.4;cursor:default}button.primary{background:#1a614e;border-color:var(--green)}input[type=range]{width:100%;accent-color:var(--green);margin:20px 0 6px}.turn{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;color:var(--muted)}
+.snake{margin:0 0 26px}.snake h2{font-size:18px;font-weight:600;margin:0 0 10px}.health{height:6px;background:#243440;border-radius:4px;overflow:hidden}.health span{display:block;height:100%;transition:width .1s}.numbers{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;margin:9px 0}.stat{color:var(--muted);font-size:14px;line-height:1.8}.badge{color:var(--green);font-size:14px}.legend{font-size:14px;color:var(--muted);margin-top:24px}
+@media(max-width:650px){main{padding:20px 14px}.layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat,.legend{grid-column:1/-1}header{align-items:start}h1 span{display:block;margin-top:5px}}
+</style>
+<main>
+<header><h1>VIPER <span>локальная арена</span></h1><span class="badge" id="result">Повтор матча</span></header>
+<div class="layout"><section>
+<canvas id="board" width="660" height="660" role="img" aria-label="Игровое поле Battlesnake"></canvas>
+<input id="seek" aria-label="Номер хода" type="range" min="0" value="0">
+<div class="turn"><span id="turn"></span><span id="total"></span></div>
+<div class="controls"><button id="prev" aria-label="Предыдущий ход">←</button><button id="play" class="primary">Смотреть</button><button id="next" aria-label="Следующий ход">→</button><label>Скорость <select id="speed"><option value="500">2 хода/с</option><option value="150" selected>7 ходов/с</option><option value="50">20 ходов/с</option></select></label></div>
+</section><aside class="sidebar"><div id="snakes"></div><div class="stat" id="stats"></div><p class="legend">Круги — еда. Голова отмечена глазами. Стрелки клавиатуры переключают ходы, пробел запускает повтор.</p></aside></div>
+</main>
+<script>
+const frames=/*REPLAY_DATA*/[];
+const colors=['#36d6a0','#ffba75','#99a9ff','#f29fc5'];
+const canvas=document.getElementById('board'),ctx=canvas.getContext('2d'),seek=document.getElementById('seek');
+const ids=[...new Set(frames.flatMap(f=>f.state.board.snakes.map(s=>s.id)))];
+ids.sort((a,b)=>{const first=frames[0].state.board.snakes;return Number(first.find(s=>s.id===b)?.name==='viper')-Number(first.find(s=>s.id===a)?.name==='viper')});
+let index=0,timer=null;seek.max=frames.length-1;
+const el=id=>document.getElementById(id);
+function render(){
+ const f=frames[index],b=f.state.board,cell=canvas.width/b.width;
+ ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#14212a';ctx.fillRect(0,0,canvas.width,canvas.height);
+ for(let y=0;y<b.height;y++)for(let x=0;x<b.width;x++){ctx.fillStyle=(x+y)%2?'#182630':'#14212a';ctx.fillRect(x*cell,(b.height-1-y)*cell,cell,cell)}
+ for(const p of b.hazards||[]){ctx.fillStyle='#6b3442';ctx.fillRect(p.x*cell,(b.height-1-p.y)*cell,cell,cell)}
+ for(const p of b.food){ctx.fillStyle='#ec6c77';ctx.beginPath();ctx.arc((p.x+.5)*cell,(b.height-.5-p.y)*cell,cell*.16,0,Math.PI*2);ctx.fill()}
+ const text=[];
+ for(const id of ids){
+  const s=b.snakes.find(s=>s.id===id);if(!s)continue;
+  const color=colors[ids.indexOf(id)%colors.length];ctx.globalAlpha=s.alive===false?.25:1;ctx.fillStyle=color;
+  s.body.forEach((p,j)=>{ctx.globalAlpha=(s.alive===false?.25:1)*(j===0?1:.72);ctx.fillRect(p.x*cell+2,(b.height-1-p.y)*cell+2,cell-4,cell-4)});
+  ctx.globalAlpha=1;const head=s.body[0];ctx.fillStyle='#0c1319';
+  for(const offset of [-.15,.15]){ctx.beginPath();ctx.arc((head.x+.5+offset)*cell,(b.height-.55-head.y)*cell,cell*.045,0,Math.PI*2);ctx.fill()}
+  text.push(`${s.name}: длина ${s.length}, здоровье ${s.health}`);
+ }
+ canvas.setAttribute('aria-label',`Ход ${f.state.turn}. ${text.join('. ')}`);
+ const sidebar=el('snakes');sidebar.replaceChildren();
+ for(const id of ids){const s=b.snakes.find(s=>s.id===id), original=frames[0].state.board.snakes.find(s=>s.id===id);const color=colors[ids.indexOf(id)%colors.length];
+  const div=document.createElement('div');div.className='snake';const title=document.createElement('h2');title.textContent=(s||original)?.name||id;title.style.color=color;div.append(title);
+  const numbers=document.createElement('div');numbers.className='numbers';numbers.textContent=s&&s.alive!==false?`Длина ${s.length} · Здоровье ${s.health}`:'Выбыла';div.append(numbers);
+  const health=document.createElement('div');health.className='health';const fill=document.createElement('span');fill.style.background=color;fill.style.width=`${s&&s.alive!==false?s.health:0}%`;health.append(fill);div.append(health);sidebar.append(div);
+ }
+ el('turn').textContent=`Ход ${f.state.turn}`;el('total').textContent=`из ${frames.at(-1).state.turn}`;seek.value=index;
+ const stats=f.stats||{};el('stats').textContent=stats.depth?`Поиск: ${stats.depth} ходов вперёд · ${stats.nodes.toLocaleString('ru')} позиций · ${stats.engine_ms.toFixed(1)} мс`:'';
+ el('prev').disabled=index===0;el('next').disabled=index===frames.length-1;
+ const alive=b.snakes.filter(s=>s.alive!==false);el('result').textContent=index===frames.length-1?(alive.length===1?`Победитель: ${alive[0].name}`:alive.length===0?'Ничья':'Конец записи'):'Повтор матча';
+}
+function stop(){clearInterval(timer);timer=null;el('play').textContent='Смотреть'}
+function play(){if(timer){stop();return}if(index===frames.length-1)index=0;el('play').textContent='Пауза';timer=setInterval(()=>{index++;render();if(index===frames.length-1)stop()},Number(el('speed').value))}
+el('play').onclick=play;el('prev').onclick=()=>{stop();index=Math.max(0,index-1);render()};el('next').onclick=()=>{stop();index=Math.min(frames.length-1,index+1);render()};seek.oninput=()=>{stop();index=Number(seek.value);render()};el('speed').onchange=()=>{if(timer){stop();play()}};
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT'].includes(e.target.tagName))return;if(e.code==='Space'){e.preventDefault();play()}if(e.code==='ArrowRight')el('next').click();if(e.code==='ArrowLeft')el('prev').click()});
+render();
+</script>
+</html>
